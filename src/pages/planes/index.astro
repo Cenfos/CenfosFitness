@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WorkoutCard from '../../components/WorkoutCard.astro';
+import ExerciseList from '../../components/ExerciseList';
+
+const workoutPlans = [
+  {
+    id: 'full-body',
+    title: 'Full Body',
+    description: 'Entrenamiento completo para todo el cuerpo',
+    level: 'Principiante',
+    duration: '45-60 min',
+    frequency: '3 veces por semana',
+    image: '/images/workout-full-body.svg'
+  },
+  {
+    id: 'hiit',
+    title: 'HIIT',
+    description: 'Entrenamiento de alta intensidad por intervalos',
+    level: 'Intermedio',
+    duration: '30-40 min',
+    frequency: '2-3 veces por semana',
+    image: '/images/workout-hiit.svg'
+  },
+  {
+    id: 'calistenia',
+    title: 'Calistenia',
+    description: 'Entrenamiento con peso corporal',
+    level: 'Todos los niveles',
+    duration: '40-50 min',
+    frequency: '3-4 veces por semana',
+    image: '/images/workout-calisthenics.svg'
+  }
+];
+---
+
+<Layout title="Planes de Entrenamiento - FitLife">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Planes de Entrenamiento</h1>
+      <p class="text-xl text-gray-600">
+        Elige el plan que mejor se adapte a tus objetivos y nivel actual
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {workoutPlans.map((plan) => (
+        <WorkoutCard plan={plan} />
+      ))}
+    </div>
+
+    <div class="mt-16">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Ejercicios Incluidos
+      </h2>
+      <ExerciseList client:load />
+    </div>
+  </div>
+</Layout>

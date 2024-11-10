@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Push-ups</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F3F4F6" x="0" y="0" width="200" height="200"></rect>
+        <g transform="translate(40, 60)" stroke="#374151" stroke-width="2">
+            <path d="M0,80 L120,80" stroke-linecap="round"/>
+            <circle cx="30" cy="40" r="15"/>
+            <path d="M30,55 L30,80" stroke-linecap="round"/>
+            <path d="M15,30 L100,30" stroke-linecap="round"/>
+            <path d="M90,40 L90,80" stroke-linecap="round"/>
+        </g>
+    </g>
+</svg>

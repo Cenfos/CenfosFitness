@@ -1,0 +1,55 @@
+---
+interface Props {
+  plan: {
+    id: string;
+    title: string;
+    description: string;
+    level: string;
+    duration: string;
+    frequency: string;
+    image: string;
+  };
+}
+
+const { plan } = Astro.props;
+---
+
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+  <div class="aspect-w-16 aspect-h-9">
+    <img
+      src={plan.image}
+      alt={plan.title}
+      class="w-full h-48 object-cover"
+    />
+  </div>
+  <div class="p-6">
+    <h3 class="text-2xl font-bold text-gray-900 mb-2">{plan.title}</h3>
+    <p class="text-gray-600 mb-4">{plan.description}</p>
+    <div class="space-y-2 mb-6">
+      <div class="flex items-center text-gray-700">
+        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Nivel: {plan.level}</span>
+      </div>
+      <div class="flex items-center text-gray-700">
+        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+        <span>Duración: {plan.duration}</span>
+      </div>
+      <div class="flex items-center text-gray-700">
+        <svg class="h-5 w-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+        </svg>
+        <span>Frecuencia: {plan.frequency}</span>
+      </div>
+    </div>
+    <a
+      href={`/planes/${plan.id}`}
+      class="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+    >
+      Ver Detalles
+    </a>
+  </div>
+</div>

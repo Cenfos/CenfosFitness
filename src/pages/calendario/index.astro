@@ -1,0 +1,19 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import WorkoutCalendar from '../../components/WorkoutCalendar';
+---
+
+<Layout title="Calendario de Entrenamientos - FitLife">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Calendario de Entrenamientos</h1>
+      <p class="text-xl text-gray-600">
+        Organiza y sigue tu progreso de entrenamiento
+      </p>
+    </div>
+
+    <div class="bg-white rounded-lg shadow-lg p-6">
+      <WorkoutCalendar client:load />
+    </div>
+  </div>
+</Layout>

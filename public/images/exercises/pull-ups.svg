@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="200px" height="200px" viewBox="0 0 200 200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Pull-ups</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="#F3F4F6" x="0" y="0" width="200" height="200"></rect>
+        <g transform="translate(40, 20)" stroke="#374151" stroke-width="2">
+            <path d="M120,20 L120,160" stroke-linecap="round"/>
+            <circle cx="60" cy="70" r="20"/>
+            <path d="M60,90 L60,140" stroke-linecap="round"/>
+            <path d="M60,100 L40,120" stroke-linecap="round"/>
+            <path d="M60,100 L80,120" stroke-linecap="round"/>
+            <path d="M30,50 L90,50" stroke-linecap="round"/>
+        </g>
+    </g>
+</svg>

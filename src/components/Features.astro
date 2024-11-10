@@ -1,0 +1,44 @@
+---
+const features = [
+  {
+    title: 'Entrenamientos Personalizados',
+    description: 'Planes adaptados a tu nivel y objetivos, con ejercicios específicos y progresión gradual.',
+    icon: '💪'
+  },
+  {
+    title: 'Nutrición a Medida',
+    description: 'Planes nutricionales personalizados: keto, alto en proteínas o bajo en carbohidratos.',
+    icon: '🥗'
+  },
+  {
+    title: 'Calendario Interactivo',
+    description: 'Organiza y sigue tu progreso con nuestro calendario de entrenamientos integrado.',
+    icon: '📅'
+  },
+  {
+    title: 'Ejercicios Guiados',
+    description: 'Ilustraciones detalladas y guías paso a paso para cada ejercicio.',
+    icon: '📱'
+  }
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900">¿Por qué elegir FitLife?</h2>
+      <p class="mt-4 text-lg text-gray-600">
+        Descubre cómo podemos ayudarte a alcanzar tus objetivos fitness
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {features.map(feature => (
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-semibold mb-2">{feature.title}</h3>
+          <p class="text-gray-600">{feature.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

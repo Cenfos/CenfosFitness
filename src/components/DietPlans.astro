@@ -1,0 +1,78 @@
+---
+const dietPlans = [
+  {
+    title: 'Plan Keto',
+    description: 'Alto en grasas, bajo en carbohidratos',
+    features: [
+      'Máximo 30g de carbohidratos al día',
+      'Alto consumo de grasas saludables',
+      'Proteína moderada',
+      'Ideal para pérdida de peso'
+    ],
+    meals: [
+      'Desayuno: Huevos con aguacate',
+      'Almuerzo: Ensalada con pollo y aceite de oliva',
+      'Cena: Salmón con verduras'
+    ]
+  },
+  {
+    title: 'Alto en Proteínas',
+    description: 'Ideal para ganar masa muscular',
+    features: [
+      '2g de proteína por kg de peso corporal',
+      'Carbohidratos moderados',
+      'Grasas saludables',
+      'Perfecto para entrenamiento de fuerza'
+    ],
+    meals: [
+      'Desayuno: Avena con proteína',
+      'Almuerzo: Pechuga de pollo con arroz',
+      'Cena: Pescado con quinoa'
+    ]
+  },
+  {
+    title: 'Bajo en Carbohidratos',
+    description: 'Balance entre proteínas y grasas',
+    features: [
+      'Reducción gradual de carbohidratos',
+      'Alto contenido en fibra',
+      'Proteínas magras',
+      'Enfoque en pérdida de grasa'
+    ],
+    meals: [
+      'Desayuno: Yogur con frutos secos',
+      'Almuerzo: Pavo con vegetales',
+      'Cena: Tofu con verduras'
+    ]
+  }
+];
+---
+
+<div class="space-y-8">
+  <h2 class="text-2xl font-bold text-gray-900 mb-6">Planes Nutricionales</h2>
+  
+  {dietPlans.map(plan => (
+    <div class="bg-white rounded-lg shadow-lg p-6">
+      <h3 class="text-xl font-bold text-gray-900 mb-3">{plan.title}</h3>
+      <p class="text-gray-600 mb-4">{plan.description}</p>
+      
+      <div class="mb-4">
+        <h4 class="font-semibold text-gray-900 mb-2">Características:</h4>
+        <ul class="list-disc list-inside space-y-1 text-gray-600">
+          {plan.features.map(feature => (
+            <li>{feature}</li>
+          ))}
+        </ul>
+      </div>
+      
+      <div>
+        <h4 class="font-semibold text-gray-900 mb-2">Ejemplo de Comidas:</h4>
+        <ul class="space-y-1 text-gray-600">
+          {plan.meals.map(meal => (
+            <li>{meal}</li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  ))}
+</div>
