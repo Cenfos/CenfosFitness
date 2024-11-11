@@ -1,0 +1,21 @@
+---
+export interface Menu {
+  name: string;
+  description: string;
+  calories: number;
+  protein: number;
+}
+
+const { name, description, calories, protein } = Astro.props as Menu;
+---
+
+<div class="menu-card">
+  <h3>{name}</h3>
+  <p>{description}</p>
+  <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">Ver detalles</button>
+  
+  <div class="menu-info hidden">
+    <p><strong>Calorías:</strong> {calories} kcal</p>
+    <p><strong>Proteínas:</strong> {protein} g</p>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+---
+
+// Importa el componente MenuCard
+import MenuCard from './MenuCard.astro';
+
+// Define la lista de menús
+const menus = [
+  {
+    name: "Menú Día 1",
+    description: "Desayuno: Huevos revueltos con aguacate, Almuerzo: Ensalada de pollo con mayonesa casera, Cena: Filete de salmón a la parrilla con espárragos.",
+    calories: 1600,
+    protein: 95
+  },
+  {
+    name: "Menú Día 2",
+    description: "Desayuno: Yogur griego sin azúcar con nueces y semillas, Almuerzo: Ensalada de atún con aguacate y aceite de oliva, Cena: Pechuga de pollo al horno con brócoli.",
+    calories: 1500,
+    protein: 90
+  },
+  // Agrega más menús según sea necesario
+];
+---
+
+<div class="menu-container">
+  {menus.map(menu => (
+    <MenuCard {...menu} />
+  ))}
+</div>

@@ -1,0 +1,123 @@
+[
+    {
+      "name": "Menú Día 1",
+      "description": "Desayuno: Huevos revueltos con aguacate, Almuerzo: Ensalada de pollo con mayonesa casera, Cena: Filete de salmón a la parrilla con espárragos.",
+      "calories": 1600,
+      "protein": 95
+    },
+    {
+      "name": "Menú Día 2",
+      "description": "Desayuno: Yogur griego sin azúcar con nueces y semillas, Almuerzo: Ensalada de atún con aguacate y aceite de oliva, Cena: Pechuga de pollo al horno con brócoli.",
+      "calories": 1500,
+      "protein": 90
+    },
+    {
+      "name": "Menú Día 3",
+      "description": "Desayuno: Batido de proteínas con espinacas, aguacate y leche de almendras, Almuerzo: Ensalada César con pollo, Cena: Carne de res con verduras al vapor.",
+      "calories": 1550,
+      "protein": 100
+    },
+    {
+      "name": "Menú Día 4",
+      "description": "Desayuno: Omelette de espinacas y queso cheddar, Almuerzo: Hamburguesa sin pan con queso, cebolla, y guacamole, Cena: Salmón a la parrilla con brócoli al vapor.",
+      "calories": 1450,
+      "protein": 85
+    },
+    {
+      "name": "Menú Día 5",
+      "description": "Desayuno: Aguacate relleno con huevo y tocino, Almuerzo: Pechuga de pollo con ensalada de espinacas, Cena: Carne de cerdo con calabacín salteado.",
+      "calories": 1600,
+      "protein": 98
+    },
+    {
+      "name": "Menú Día 6",
+      "description": "Desayuno: Batido de aguacate con espirulina, Almuerzo: Ensalada de atún con aceitunas y mayonesa, Cena: Pavo al horno con brócoli y mantequilla.",
+      "calories": 1500,
+      "protein": 92
+    },
+    {
+      "name": "Menú Día 7",
+      "description": "Desayuno: Taza de café con aceite MCT y mantequilla, Almuerzo: Pollo asado con ensalada de col, Cena: Pescado blanco con espárragos al horno.",
+      "calories": 1550,
+      "protein": 90
+    },
+    {
+      "name": "Menú Día 8",
+      "description": "Desayuno: Huevos al gusto con aguacate, Almuerzo: Ensalada de pollo con mayonesa casera, Cena: Costillas de cerdo con calabacín.",
+      "calories": 1580,
+      "protein": 100
+    },
+    {
+      "name": "Menú Día 9",
+      "description": "Desayuno: Pudding de chía con leche de almendra, Almuerzo: Ensalada con aguacate, tomate, pepino y pollo, Cena: Tacos keto con carne molida, guacamole y lechuga.",
+      "calories": 1450,
+      "protein": 85
+    },
+    {
+      "name": "Menú Día 10",
+      "description": "Desayuno: Tortilla de huevo con espinacas y queso, Almuerzo: Hamburguesa de pavo con aguacate, Cena: Pechuga de pollo con espárragos a la mantequilla.",
+      "calories": 1500,
+      "protein": 90
+    },
+    {
+      "name": "Menú Día 11",
+      "description": "Desayuno: Smoothie de aguacate con leche de coco, Almuerzo: Ensalada de atún con huevo duro y aguacate, Cena: Pescado al horno con calabacín.",
+      "calories": 1550,
+      "protein": 93
+    },
+    {
+      "name": "Menú Día 12",
+      "description": "Desayuno: Taza de café bulletproof, Almuerzo: Pechuga de pollo con brócoli al vapor y mayonesa, Cena: Ensalada de salmón con aguacate y espinacas.",
+      "calories": 1600,
+      "protein": 95
+    },
+    {
+      "name": "Menú Día 13",
+      "description": "Desayuno: Huevos revueltos con champiñones y tocino, Almuerzo: Carne de res con espárragos y mantequilla, Cena: Ensalada de pollo con mayonesa de aguacate.",
+      "calories": 1500,
+      "protein": 88
+    },
+    {
+      "name": "Menú Día 14",
+      "description": "Desayuno: Yogur griego con almendras y semillas de chía, Almuerzo: Pollo al curry con crema de coco, Cena: Pescado con ensalada de pepino y aguacate.",
+      "calories": 1550,
+      "protein": 90
+    },
+    {
+      "name": "Menú Día 15",
+      "description": "Desayuno: Omelette con queso y tocino, Almuerzo: Carne de cerdo con espinacas, Cena: Salmón con aguacate y ensalada de tomate.",
+      "calories": 1600,
+      "protein": 95
+    },
+    {
+      "name": "Menú Día 16",
+      "description": "Desayuno: Batido de proteínas con espirulina, Almuerzo: Ensalada de atún con mayonesa de aguacate, Cena: Pechuga de pavo con coles de Bruselas.",
+      "calories": 1450,
+      "protein": 85
+    },
+    {
+      "name": "Menú Día 17",
+      "description": "Desayuno: Huevos revueltos con aguacate y salsa picante, Almuerzo: Pechuga de pollo con ensalada de col, Cena: Pescado al vapor con calabacín.",
+      "calories": 1500,
+      "protein": 88
+    },
+    {
+      "name": "Menú Día 18",
+      "description": "Desayuno: Taza de café con aceite MCT, Almuerzo: Ensalada de salmón con aguacate, Cena: Costillas de cerdo con espárragos.",
+      "calories": 1600,
+      "protein": 100
+    },
+    {
+      "name": "Menú Día 19",
+      "description": "Desayuno: Yogur griego con frambuesas y nueces, Almuerzo: Ensalada de pollo con mayonesa casera, Cena: Carne molida con calabacín.",
+      "calories": 1500,
+      "protein": 90
+    },
+    {
+      "name": "Menú Día 20",
+      "description": "Desayuno: Omelette con espinacas, queso y champiñones, Almuerzo: Pollo asado con aguacate, Cena: Pescado con ensalada de pepino y aguacate.",
+      "calories": 1450,
+      "protein": 85
+    }
+  ]
+  

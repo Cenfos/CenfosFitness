@@ -2,6 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import NutritionCalculator from '../../components/NutritionCalculator';
 import DietPlans from '../../components/DietPlans.astro';
+import "../../assets/styles.css";
+import MenuList from '../../components/MenuList.astro';
 ---
 
 <Layout title="Nutrición - FitLife">
@@ -22,7 +24,10 @@ import DietPlans from '../../components/DietPlans.astro';
       </div>
 
       <div>
-        <DietPlans />
+        <DietPlans />        
+      </div>
+      <div>
+        <MenuList />
       </div>
     </div>
   </div>
