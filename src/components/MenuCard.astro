@@ -1,21 +1,36 @@
 ---
 export interface Menu {
   name: string;
-  description: string;
+  desayuno: string;
+  almuerzo: string;
+  cena: string;
   calories: number;
   protein: number;
+  type: 'Desayuno' | 'Almuerzo' | 'Cena';
 }
 
-const { name, description, calories, protein } = Astro.props as Menu;
+const { name, desayuno, almuerzo, cena, calories, protein, type } = Astro.props as Menu;
+
+// Determinamos una clase de tipo para aplicar estilos según el tipo de menú
+const categoryClass = type ? type.toLowerCase() : 'categoria';
 ---
 
-<div class="menu-card">
-  <h3>{name}</h3>
-  <p>{description}</p>
-  <button class="expand-btn" onclick="this.nextElementSibling.classList.toggle('hidden')">Ver detalles</button>
+<!-- Contenedor de la categoría -->
+<div class={`menu-category ${categoryClass}`}>
+  <h2 class="menu-type">{type}</h2>
   
-  <div class="menu-info hidden">
-    <p><strong>Calorías:</strong> {calories} kcal</p>
-    <p><strong>Proteínas:</strong> {protein} g</p>
+  <!-- Tarjetas de menú -->
+  <div class="menu-cards">
+    <div class="menu-card">
+      <h3 class="menu-title"><strong>{name}</strong></h3>
+      <p class="menu-description"><strong>Desayuno:</strong> {desayuno}</p>
+      <p class="menu-description"><strong>Almuerzo:</strong> {almuerzo}</p>
+      <p class="menu-description"><strong>Cena:</strong> {cena}</p>
+      
+      <div class="menu-info">
+        <p><strong>Calorías:</strong> {calories} kcal</p>
+        <p><strong>Proteínas:</strong> {protein} g</p>
+      </div>
+    </div>
   </div>
 </div>

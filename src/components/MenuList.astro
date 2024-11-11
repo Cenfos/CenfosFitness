@@ -1,24 +1,170 @@
 ---
-
-// Importa el componente MenuCard
 import MenuCard from './MenuCard.astro';
 
-// Define la lista de menús
 const menus = [
-  {
-    name: "Menú Día 1",
-    description: "Desayuno: Huevos revueltos con aguacate, Almuerzo: Ensalada de pollo con mayonesa casera, Cena: Filete de salmón a la parrilla con espárragos.",
-    calories: 1600,
-    protein: 95
-  },
-  {
-    name: "Menú Día 2",
-    description: "Desayuno: Yogur griego sin azúcar con nueces y semillas, Almuerzo: Ensalada de atún con aguacate y aceite de oliva, Cena: Pechuga de pollo al horno con brócoli.",
-    calories: 1500,
-    protein: 90
-  },
-  // Agrega más menús según sea necesario
-];
+    {
+      "name": "Menú Día 1",
+      "desayuno": "Huevos revueltos con aguacate y una rebanada de pan integral",
+      "almuerzo": "Ensalada de pollo (200g) con mayonesa casera y quinoa",
+      "cena": "Filete de salmón a la parrilla (180g) con espárragos y puré de batata",
+      "calories": 2000,
+      "protein": 120
+    },
+    {
+      "name": "Menú Día 2",
+      "desayuno": "Yogur griego sin azúcar con nueces, semillas y frutas del bosque",
+      "almuerzo": "Ensalada de atún (150g) con aguacate, aceite de oliva y lentejas",
+      "cena": "Pechuga de pollo al horno (200g) con brócoli y arroz integral",
+      "calories": 2000,
+      "protein": 115
+    },
+    {
+      "name": "Menú Día 3",
+      "desayuno": "Batido de proteínas con espinacas, aguacate y leche de almendras",
+      "almuerzo": "Ensalada César con pollo (180g) y trozos de pan tostado",
+      "cena": "Carne de res a la parrilla (200g) con verduras al vapor y puré de patata",
+      "calories": 2000,
+      "protein": 125
+    },
+    {
+      "name": "Menú Día 4",
+      "desayuno": "Omelette de espinacas, champiñones y queso cheddar",
+      "almuerzo": "Hamburguesa sin pan con queso (200g), cebolla, guacamole y batata al horno",
+      "cena": "Salmón a la parrilla (180g) con brócoli al vapor y quinoa",
+      "calories": 2000,
+      "protein": 120
+    },
+    {
+      "name": "Menú Día 5",
+      "desayuno": "Aguacate relleno con huevo y tocino, acompañado de una tostada integral",
+      "almuerzo": "Pechuga de pollo a la parrilla (200g) con ensalada de espinacas y arroz integral",
+      "cena": "Carne de cerdo (200g) con calabacín salteado y puré de coliflor",
+      "calories": 2000,
+      "protein": 118
+    },
+    {
+      "name": "Menú Día 6",
+      "desayuno": "Batido de aguacate con espirulina y una rebanada de pan con hummus",
+      "almuerzo": "Ensalada de atún (150g) con aceitunas, huevo cocido y patata al vapor",
+      "cena": "Pavo al horno (200g) con brócoli y quinoa",
+      "calories": 2000,
+      "protein": 115
+    },
+    {
+      "name": "Menú Día 7",
+      "desayuno": "Taza de café con aceite MCT, mantequilla y dos rebanadas de pan integral con aguacate",
+      "almuerzo": "Pollo asado (200g) con ensalada de col y batatas asadas",
+      "cena": "Pescado blanco (180g) con espárragos al horno y arroz basmati",
+      "calories": 2000,
+      "protein": 118
+    },
+    {
+      "name": "Menú Día 8",
+      "desayuno": "Huevos al gusto con aguacate y tostada de pan integral",
+      "almuerzo": "Ensalada de pollo (200g) con mayonesa casera, garbanzos y vegetales frescos",
+      "cena": "Costillas de cerdo (200g) con calabacín y puré de boniato",
+      "calories": 2000,
+      "protein": 120
+    },
+    {
+      "name": "Menú Día 9",
+      "desayuno": "Pudding de chía con leche de almendra y frutas del bosque",
+      "almuerzo": "Ensalada con aguacate, tomate, pepino y pollo a la plancha (180g)",
+      "cena": "Tacos keto con carne molida (200g), guacamole y lechuga",
+      "calories": 2000,
+      "protein": 115
+    },
+    {
+      "name": "Menú Día 10",
+      "desayuno": "Tortilla de huevo con espinacas, queso y una rebanada de pan integral",
+      "almuerzo": "Hamburguesa de pavo (200g) con aguacate y ensalada de espinacas",
+      "cena": "Pechuga de pollo (200g) con espárragos a la mantequilla y puré de batata",
+      "calories": 2000,
+      "protein": 118
+    },
+    
+    {
+        "name": "Menú Día 11",
+        "desayuno": "Avena cocida con leche de almendra, rodajas de plátano y nueces",
+        "almuerzo": "Salmón a la parrilla (180g) con quinoa y brócoli al vapor",
+        "cena": "Tortilla de espinacas y champiñones con una rebanada de pan integral",
+        "calories": 2000,
+        "protein": 115
+    },
+    {
+        "name": "Menú Día 12",
+        "desayuno": "Smoothie de espinaca, mango, leche de coco y chía",
+        "almuerzo": "Pollo al horno (200g) con batatas y espárragos",
+        "cena": "Pescado blanco (200g) con ensalada de rúcula, tomate y pepino",
+        "calories": 2000,
+        "protein": 120
+    },
+    {
+        "name": "Menú Día 13",
+        "desayuno": "Yogur griego con fresas y avena",
+        "almuerzo": "Pechuga de pavo (200g) con arroz integral y ensalada de col rizada",
+        "cena": "Lentejas guisadas con zanahorias, espinacas y cebolla",
+        "calories": 2000,
+        "protein": 105
+    },
+    {
+        "name": "Menú Día 14",
+        "desayuno": "Tostadas integrales con aguacate y huevo",
+        "almuerzo": "Filete de ternera (200g) con puré de batata y judías verdes",
+        "cena": "Ensalada de garbanzos con pimientos, pepino, y queso feta",
+        "calories": 2000,
+        "protein": 110
+    },
+    {
+        "name": "Menú Día 15",
+        "desayuno": "Tortilla de claras de huevo con espinaca y champiñones",
+        "almuerzo": "Hamburguesa de pavo (200g) con quinoa y ensalada de espinacas",
+        "cena": "Merluza al horno (200g) con verduras asadas",
+        "calories": 2000,
+        "protein": 118
+    },
+    {
+        "name": "Menú Día 16",
+        "desayuno": "Batido de proteínas con plátano, avena y leche de almendra",
+        "almuerzo": "Muslo de pollo a la plancha (200g) con ensalada de rúcula y tomates cherry",
+        "cena": "Salteado de tofu con brócoli, pimiento rojo y calabacín",
+        "calories": 2000,
+        "protein": 110
+    },
+    {
+        "name": "Menú Día 17",
+        "desayuno": "Tostada de pan integral con queso cottage y rodajas de tomate",
+        "almuerzo": "Lomo de cerdo (200g) con batatas asadas y espinacas salteadas",
+        "cena": "Ensalada de atún con espárragos, pimiento rojo y lechuga",
+        "calories": 2000,
+        "protein": 115
+    },
+    {
+        "name": "Menú Día 18",
+        "desayuno": "Avena cocida con leche de coco y rodajas de manzana",
+        "almuerzo": "Pechuga de pollo (200g) con arroz basmati y brócoli",
+        "cena": "Huevos revueltos con espinaca, pimiento y una rebanada de pan integral",
+        "calories": 2000,
+        "protein": 118
+    },
+    {
+        "name": "Menú Día 19",
+        "desayuno": "Yogur natural con granola y arándanos",
+        "almuerzo": "Salmón a la parrilla (200g) con puré de papas y ensalada de rúcula",
+        "cena": "Tortilla de verduras con calabacín, espinacas y champiñones",
+        "calories": 2000,
+        "protein": 113
+    },
+    {
+        "name": "Menú Día 20",
+        "desayuno": "Pudding de chía con leche de almendra y frutos rojos",
+        "almuerzo": "Ternera a la plancha (200g) con quinoa y espárragos",
+        "cena": "Lentejas con espinacas y pimiento rojo",
+        "calories": 2000,
+        "protein": 110
+    }
+]
+
 ---
 
 <div class="menu-container">

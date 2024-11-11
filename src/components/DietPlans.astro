@@ -10,9 +10,9 @@ const dietPlans = [
       'Ideal para pérdida de peso'
     ],
     meals: [
-      'Desayuno: Huevos con aguacate',
-      'Almuerzo: Ensalada con pollo y aceite de oliva',
-      'Cena: Salmón con verduras'
+      'Desayuno: 3 huevos revueltos con ½ aguacate (75g), cocinados en 1 cucharada de aceite de oliva (15g).',
+      'Almuerzo: 200g de pechuga de pollo a la parrilla, ensalada verde con 150g de lechuga, espinacas, pepino, 1 cucharada de aceite de oliva (15g) y 10g de semillas de chía.',
+      'Cena: 200g de salmón a la parrilla con 200g de brócoli y espárragos al vapor, rociados con 1 cucharada de aceite de coco (15g).'
     ]
   },
   {
@@ -25,54 +25,43 @@ const dietPlans = [
       'Perfecto para entrenamiento de fuerza'
     ],
     meals: [
-      'Desayuno: Avena con proteína',
-      'Almuerzo: Pechuga de pollo con arroz',
-      'Cena: Pescado con quinoa'
+      'Desayuno: Batido de de 1 aguacate maduro, 25-30gr de proteína en polvo, 200 ml de leche de almendras sin azúcar y una o dos cucharadas de cacao en polvo. ',
+      'Almuerzo: 200g de pechuga de pollo, 150g de arroz integral cocido, 100g de zanahorias asadas y 1 cucharada de aceite de oliva (15g).',
+      'Cena: 200g de tilapia o merluza al horno, 150g de quinoa cocida y 200g de espinacas salteadas con 1 cucharada de aceite de oliva (15g).'
     ]
   },
-  {
-    title: 'Bajo en Carbohidratos',
-    description: 'Balance entre proteínas y grasas',
-    features: [
-      'Reducción gradual de carbohidratos',
-      'Alto contenido en fibra',
-      'Proteínas magras',
-      'Enfoque en pérdida de grasa'
-    ],
-    meals: [
-      'Desayuno: Yogur con frutos secos',
-      'Almuerzo: Pavo con vegetales',
-      'Cena: Tofu con verduras'
-    ]
-  }
+
 ];
+
 ---
 
-<div class="space-y-8">
+<div class="space-y-8 text-center">
   <h2 class="text-2xl font-bold text-gray-900 mb-6">Planes Nutricionales</h2>
-  
-  {dietPlans.map(plan => (
-    <div class="bg-white rounded-lg shadow-lg p-6">
-      <h3 class="text-xl font-bold text-gray-900 mb-3">{plan.title}</h3>
-      <p class="text-gray-600 mb-4">{plan.description}</p>
-      
-      <div class="mb-4">
-        <h4 class="font-semibold text-gray-900 mb-2">Características:</h4>
-        <ul class="list-disc list-inside space-y-1 text-gray-600">
-          {plan.features.map(feature => (
-            <li>{feature}</li>
-          ))}
-        </ul>
+
+  <div class="flex flex-wrap justify-center gap-4">
+    {dietPlans.map(plan => (
+      <div class="bg-white rounded-lg shadow-lg p-6 w-full sm:w-80 lg:w-1/3">
+        <h3 class="text-xl font-bold text-gray-900 mb-3">{plan.title}</h3>
+        <p class="text-gray-600 mb-4">{plan.description}</p>
+        
+        <div class="mb-4">
+          <h4 class="font-semibold text-gray-900 mb-2">Características:</h4>
+          <ul class="list-disc list-inside space-y-1 text-gray-600">
+            {plan.features.map(feature => (
+              <li>{feature}</li>
+            ))}
+          </ul>
+        </div>
+        
+        <div>
+          <h4 class="font-semibold text-gray-900 mb-2">Ejemplo de Comidas:</h4>
+          <ul class="space-y-1 text-gray-600">
+            {plan.meals.map(meal => (
+              <li>{meal}</li>
+            ))}
+          </ul>
+        </div>
       </div>
-      
-      <div>
-        <h4 class="font-semibold text-gray-900 mb-2">Ejemplo de Comidas:</h4>
-        <ul class="space-y-1 text-gray-600">
-          {plan.meals.map(meal => (
-            <li>{meal}</li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  ))}
+    ))}
+  </div>
 </div>
