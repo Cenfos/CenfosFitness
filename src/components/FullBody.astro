@@ -1,0 +1,253 @@
+---
+const ejercicios = [
+    {
+        grupo: "Pecho",
+        ejercicios: [
+            {
+                nombre: "Flexiones",
+                imagen: "/images/exercises/flexiones.jpg",
+                descripcion: "Mantén tu cuerpo recto, baja hasta que tu pecho casi toque el suelo y empuja hacia arriba.",
+                series: "3x10"
+            },
+            {
+                nombre: "Aperturas con mancuernas",
+                imagen: "/images/exercises/apertura-mancuernas.jpg",
+                descripcion: "Recuéstate en un banco y sujeta una mancuerna en cada mano. Abre los brazos hacia los lados hasta sentir un estiramiento en el pecho, luego cierra las manos nuevamente hacia el centro.",
+                series: "3x10"
+            },
+            {
+                nombre: "Fondos con anillas paralelas",
+                imagen: "/images/exercises/fondos-anillas.jpg",
+                descripcion: "Sostén una anilla en cada mano y baja lentamente hasta el pecho, luego empuja hacia arriba hasta extender completamente los brazos.",
+                series: "3x10"
+            }
+        ]
+    },
+    {
+        grupo: "Espalda",
+        ejercicios: [
+            {
+                nombre: "Remo invertido con anillas paralelas",
+                imagen: "/images/exercises/remo-invertido.jpg",
+                descripcion: "Sostén una anilla en cada mano y baja lentamente hasta extender los brazos, luego empuja hacia arriba hasta flexionar los brazos.",
+                series: "3x10"
+            },
+            {
+                nombre: "Remo con mancuernas a una mano",
+                imagen: "/images/exercises/remo-con-mancuerna-a-una-mano.webp",
+                descripcion: "Sosten una mancuerna con una mano y extiende el brazo hacia atras, luego baja lentamente hasta el pecho y vuelve a subir.",
+                series: "3x10"
+            },
+            {
+                nombre: "Dominadas",
+                imagen: "/images/exercises/dominadas.jpg",
+                descripcion: "Agarra la barra con las palmas hacia adelante y los brazos extendidos. Levanta tu cuerpo hasta que tu barbilla supere la barra. Distintos agarres, prono, neutro y supino.",
+                series: "3x10"
+            }
+        ]
+    },
+    { 
+        grupo: "Brazos",
+        ejercicios: [
+            {
+                nombre: "Triceps con mancuernas",
+                imagen: "/images/exercises/extension-triceps-tras-nuca-mancuerna-dos-manos.jpg",
+                descripcion: "Sostén una mancuerna con unamano y baja lentamente hasta bajar por detrás de tu cabeza. Luego, vuelve a subir hasta la posición inicial.",
+                series: "3x10"
+            },
+            {
+                nombre: "Curl de bíceps con mancuernas, a una mano",
+                imagen: "/images/exercises/curl-concentrado.jpg",
+                descripcion: "Sentado, con una mancuerna cogida en supinación y el codo apoyado en la cara interna del muslo, se flexiona el codo hasta que la mano toque el hombro, se vuelve a la posición inicial y se repite el movimiento.",
+                series: "3x10"
+            },
+            {
+                nombre: "Curl de bíceps, martillo",
+                imagen: "/images/exercises/curl-de-biceps-alterno-tipo-martillo.jpg",
+                descripcion: "Sostén una mancuerna en cada mano y baja lentamente hasta el pecho, luego empuja hacia arriba hasta extender completamente los brazos.",
+                series: "3x10"
+            }
+        ]
+                
+
+    },
+    {
+        grupo: "Piernas",
+        ejercicios: [
+            {
+                nombre: "Sentadillas búlgaras con mancuerna",
+                imagen: "/images/exercises/sentadilla-bulgara.jpg",
+                descripcion: "Sostén una mancuerna en la mano contraria a la pierna con la que vas a hacer la sentadilla. Baja lentamente hasta que la rodilla casi toquen el suelo y luego empuja hacia arriba.",
+                series: "3x10"
+            },
+            {
+                nombre: "Sentadillas con salto",
+                imagen: "/images/exercises/sentadillas-con-salto.webp",
+                descripcion: "Sin peso, balance tu cuerpo hacia una pierna y luego salta hacia la otra. Repite alternando las piernas.",
+                series: "3x10"
+            },
+            {
+                nombre: "Sentadillas con mancuernas",
+                imagen: "/images/exercises/sentadilla-con-mancuerna.webp",
+                descripcion: "Sostén una mancuerna en cada mano y baja lentamente hasta el pecho, luego empuja hacia arriba hasta extender completamente los brazos.",
+                series: "3x10"
+            }
+        ]
+    },
+    {
+        grupo : "Abdominales",
+        ejercicios: [
+            {
+                nombre: "Abdominales con mancuernas",
+                imagen: "/images/exercises/abdominaes-con-mancuerna.jpg",
+                descripcion: "Sostén una mancuerna en cada mano y baja lentamente hasta el pecho, luego empuja hacia arriba hasta extender completamente los brazos.",
+                series: "3x10"
+            },
+            {
+                nombre: "Abdominales en anillas paralelas",
+                imagen: "/images/exercises/abdominales-en-anillas.webp",
+                descripcion: "Sostén una anilla en cada mano y levanta las rodillas hacia el pecho, luego baja lentamente.",
+                series: "3x10"
+            },
+            {
+                nombre: "Planchas",
+                imagen: "/images/exercises/plancha-abdominal.jpg",
+                descripcion: "Aguanta en posición plancha con las piernas apoyadas en el suelo y los brazos estirados hacia arriba.",
+                series: "3x10"
+            }
+            
+        ]
+    }
+];
+---
+
+<section class="entrenamiento">
+    <h2>Entrenamiento Completo para Todo el Cuerpo</h2>
+    
+    {ejercicios.map((grupo, index) => (
+        <div class="grupo-muscular" key={index}>
+            <h3>{grupo.grupo}</h3>
+            <div class="ejercicios">
+                {grupo.ejercicios.map((ejercicio, ejercicioIndex) => (
+                    <div class="ejercicio" key={ejercicioIndex}>
+                        <img src={ejercicio.imagen} alt={ejercicio.nombre} class="ejercicio-imagen" />
+                        <div class="ejercicio-descripcion">
+                            <h4>{ejercicio.nombre}</h4>
+                            <p>{ejercicio.descripcion}</p>
+                            <p><strong>Series y Repeticiones:</strong> {ejercicio.series}</p>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        </div>
+    ))}
+</section>
+
+<style>
+    /* General styles for the entire section */
+    .entrenamiento {
+        padding: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        background-color: #f9f9f9;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        color: #021506;
+        letter-spacing: 2px;
+    }
+
+    .grupo-muscular {
+        margin-bottom: 3rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        color: #0e4d17;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 3px solid #6b1c22; /* Secundario con acento */
+        padding-bottom: 0.5rem;
+    }
+
+    /* Grid styles for exercises */
+    .ejercicios {
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .ejercicio {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #0e4d17;
+        padding: 1rem;
+        border-radius: 12px;
+        background-color: #fff;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .ejercicio:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .ejercicio-imagen {
+        width: 100%;
+        max-height: 200px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+    }
+
+    .ejercicio-descripcion {
+        text-align: center;
+    }
+
+    h4 {
+        font-size: 1.5rem;
+        color: #6b1c22;
+        margin-bottom: 0.5rem;
+    }
+
+    p {
+        margin: 0.3rem 0;
+        color: #333; /* Texto más claro */
+    }
+
+    /* Responsive adjustments */
+    @media (min-width: 768px) {
+        .ejercicio {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .ejercicio-imagen {
+            width: 200px;
+            height: auto;
+            margin-right: 1rem;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .ejercicios {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        h2 {
+            font-size: 3rem;
+        }
+
+        h3 {
+            font-size: 2rem;
+        }
+
+        h4 {
+            font-size: 1.7rem;
+        }
+    }
+</style>

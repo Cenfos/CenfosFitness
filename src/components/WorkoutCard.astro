@@ -12,6 +12,16 @@ interface Props {
 }
 
 const { plan } = Astro.props;
+
+// Definimos el enlace en función del id del plan
+let link = `/planes/${plan.id}`;
+if (plan.id === "fullbody" || plan.id === "full-body") {
+  link = "/planes/fullbody";
+} else if (plan.id === "hiit") {
+  link = "/planes/hiit";
+} else if (plan.id === "calistenia") {
+  link = "/planes/calistenia";
+}
 ---
 
 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
@@ -46,7 +56,7 @@ const { plan } = Astro.props;
       </div>
     </div>
     <a
-      href={`/planes/${plan.id}`}
+      href={link}
       class="block w-full text-center bg-primary-600 hover:bg-primary-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
     >
       Ver Detalles
