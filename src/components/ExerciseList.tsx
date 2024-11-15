@@ -19,33 +19,33 @@ const exercises: Exercise[] = [
     name: 'Dominadas',
     muscleGroup: 'Espalda',
     equipment: 'Barra de dominadas',
-    difficulty: 'Intermedio',
+    difficulty: 'Alto',
     description: 'Agarra la barra con las palmas hacia adelante y los brazos extendidos. Levanta tu cuerpo hasta que tu barbilla supere la barra.',
     sets: 3,
     reps: '8-12',
-    image: '/images/exercises/pull-ups.svg'
+    image: '/images/exercises/dominadas.jpg'
   },
   {
     id: 'push-ups',
     name: 'Flexiones',
     muscleGroup: 'Pecho',
     equipment: 'Peso corporal',
-    difficulty: 'Principiante',
+    difficulty: 'Intermedio',
     description: 'Mantén tu cuerpo recto, baja hasta que tu pecho casi toque el suelo y empuja hacia arriba.',
     sets: 3,
-    reps: '10-15',
-    image: '/images/exercises/push-ups.svg'
+    reps: '15-25',
+    image: '/images/exercises/flexiones.jpg'
   },
   {
     id: 'dips',
     name: 'Fondos',
-    muscleGroup: 'Tríceps',
+    muscleGroup: 'Dorsales',
     equipment: 'Anillas paralelas',
-    difficulty: 'Intermedio',
+    difficulty: 'Alto',
     description: 'Sostente en las anillas con los brazos extendidos, baja tu cuerpo flexionando los codos y empuja hacia arriba.',
     sets: 3,
     reps: '8-12',
-    image: '/images/exercises/dips.svg'
+    image: '/images/exercises/fondos-anillas.jpg'
   }
 ];
 

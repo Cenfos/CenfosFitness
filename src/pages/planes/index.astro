@@ -3,35 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import WorkoutCard from '../../components/WorkoutCard.astro';
 import ExerciseList from '../../components/ExerciseList';
 
-const workoutPlans = [
-  {
-    id: 'full-body',
-    title: 'Full Body',
-    description: 'Entrenamiento completo para todo el cuerpo',
-    level: 'Principiante',
-    duration: '45-60 min',
-    frequency: '3 veces por semana',
-    image: '/images/workout-full-body.svg'
-  },
-  {
-    id: 'hiit',
-    title: 'HIIT',
-    description: 'Entrenamiento de alta intensidad por intervalos',
-    level: 'Intermedio',
-    duration: '30-40 min',
-    frequency: '2-3 veces por semana',
-    image: '/images/workout-hiit.svg'
-  },
-  {
-    id: 'calistenia',
-    title: 'Calistenia',
-    description: 'Entrenamiento con peso corporal',
-    level: 'Todos los niveles',
-    duration: '40-50 min',
-    frequency: '3-4 veces por semana',
-    image: '/images/workout-calisthenics.svg'
-  }
-];
 ---
 
 <Layout title="Planes de Entrenamiento - FitLife">
@@ -44,9 +15,40 @@ const workoutPlans = [
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {workoutPlans.map((plan) => (
-        <WorkoutCard plan={plan} />
-      ))}
+      <WorkoutCard
+      plan={{
+        id: "fullbody",
+        title: "Entrenamiento de fuerza",
+        description: "Usando una mancuerna y otros ejercicios de fuerza, te ayudaremos a mejorar tu fuerza y resistencia.",
+        level: "Intermedio",
+        duration: "60 minutos",
+        frequency: "3 veces por semana",
+        image: "/images/exercises/fuerza.jpg",
+      }}
+    />
+    <WorkoutCard
+  plan={{
+    id: "cardio",
+    title: "Entrenamiento cruzado",
+    description: "Running y ciclismo son ejercicios de cardio que te ayudan a mejorar tu condición cardiovascular.",
+    level: "Intermedio",
+    duration: "60 minutos",
+    frequency: "3 veces por semana",
+    image: "/images/exercises/ciclismoyrunnig.webp",
+  }},
+  />
+  <WorkoutCard
+  plan={{
+    id: "fullbody",
+    title: "Descanso activo",
+    description: "Un paseo en el bosque o una caminata son ejercicios de descanso activo que te ayudan a mejorar tu salud y bienestar.",
+    level: "Principiante",
+    duration: "60 minutos",
+    frequency: "4 veces por semana",
+    image: "/images/exercises/descanso-activo.jpg",
+  }}
+/>
+
     </div>
 
     <div class="mt-16">

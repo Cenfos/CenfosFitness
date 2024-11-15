@@ -17,8 +17,8 @@ const { plan } = Astro.props;
 let link = `/planes/${plan.id}`;
 if (plan.id === "fullbody" || plan.id === "full-body") {
   link = "/planes/fullbody";
-} else if (plan.id === "hiit") {
-  link = "/planes/hiit";
+} else if (plan.id === "hiit" || plan.id === "cardio") {
+  link = "/planes/cruzado";
 } else if (plan.id === "calistenia") {
   link = "/planes/calistenia";
 }
