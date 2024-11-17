@@ -1,33 +1,125 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import FullBody from "../../components/FullBody.astro";
 ---
-
 <Layout title="Full Body - FitLife">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <!-- Hero Section -->
     <div class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
-        Entrenamiento cruzado
-      </h1>
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">Entrenamiento cruzado</h1>
       <p class="text-xl text-gray-600">
-        El entrenamiento cruzado que combina running y ciclismo es una
-        estrategia altamente efectiva para mejorar el rendimiento físico
-        general, reducir el riesgo de lesiones y mantener la motivación. El
-        running desarrolla resistencia cardiovascular y fortalece los músculos
-        de las piernas, especialmente los isquiotibiales y las pantorrillas,
-        mientras que el ciclismo complementa este trabajo al enfocarse en los
-        cuádriceps y glúteos, al tiempo que es una actividad de bajo impacto
-        para las articulaciones. Alternar entre estas dos disciplinas permite
-        trabajar diferentes grupos musculares, aumentar la capacidad aeróbica y
-        reducir la sobrecarga en áreas específicas del cuerpo. Además, el
-        ciclismo es ideal para los días de recuperación activa después de
-        sesiones intensas de running, ya que mejora la circulación sin someter
-        al cuerpo al estrés de correr. Este enfoque balanceado no solo ayuda a
-        prevenir el desgaste físico, sino que también mantiene la actividad
-        física variada y emocionante, ideal para quienes buscan una rutina
-        completa y sostenible.
+        El entrenamiento cruzado que combina running y ciclismo es una estrategia altamente efectiva para mejorar el rendimiento físico general, reducir el riesgo de lesiones y mantener la motivación.
       </p>
     </div>
-    
+
+    <!-- Imagen destacada -->
+    <div class="mb-12">
+      <img
+        src="/public/images/exercises/specialicez.jpg"
+        alt="Entrenamiento cruzado"
+        class="w-full h-72 object-cover rounded-lg shadow-md"
+      />
+    </div>
+
+    <!-- Cards Section -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+      <div class="card bg-white shadow-md rounded-lg p-6">
+        <img
+          src="/public/images/exercises/Benef-runnig.jpg"
+          alt="Running"
+          class="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 class="text-2xl font-semibold mb-2">Beneficios del Running</h2>
+        <p class="text-gray-600">
+          Fortalece músculos clave como los isquiotibiales y mejora la resistencia cardiovascular.
+        </p>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg p-6">
+        <img
+          src="/public/images/exercises/flaca-minho.jpg"
+          alt="Cycling"
+          class="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 class="text-2xl font-semibold mb-2">Beneficios del Ciclismo</h2>
+        <p class="text-gray-600">
+          Reduce el impacto en las articulaciones y fortalece los cuádriceps y glúteos.
+        </p>
+      </div>
+      <div class="card bg-white shadow-md rounded-lg p-6">
+        <img
+          src="/public/images/exercises/flaca-playa.jpg"
+          alt="Cross Training"
+          class="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 class="text-2xl font-semibold mb-2">Entrenamiento Cruzado</h2>
+        <p class="text-gray-600">
+          Alternar entre running y ciclismo mejora la capacidad aeróbica y previene lesiones.
+        </p>
+      </div>
+    </div>
+
+    <!-- Planes de Entrenamiento -->
+    <section class="mt-12">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Planes de Entrenamiento</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Plan para Running -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-2xl font-semibold mb-4">Plan de Running</h3>
+          <ul class="list-disc list-inside text-gray-600">
+            <li><strong>Día 1:</strong> 5 km de carrera suave.</li>
+            <li><strong>Día 2:</strong> Interválicos: 6x400 m a ritmo rápido.</li>
+            <li><strong>Día 3:</strong> Descanso activo (ciclismo o estiramientos).</li>
+            <li><strong>Día 4:</strong> Carrera larga: 10 km a ritmo moderado.</li>
+            <li><strong>Día 5:</strong> Ciclismo suave como recuperación.</li>
+          </ul>
+        </div>
+        <!-- Plan para Ciclismo -->
+        <div class="bg-white shadow-md rounded-lg p-6">
+          <h3 class="text-2xl font-semibold mb-4">Plan de Ciclismo</h3>
+          <ul class="list-disc list-inside text-gray-600">
+            <li><strong>Día 1:</strong> 20 km en terreno plano a ritmo constante.</li>
+            <li><strong>Día 2:</strong> Entrenamiento en cuestas: 4x5 minutos subiendo.</li>
+            <li><strong>Día 3:</strong> Recuperación activa (running o yoga).</li>
+            <li><strong>Día 4:</strong> 40 km a ritmo moderado con variación de intensidad.</li>
+            <li><strong>Día 5:</strong> Descanso completo o actividad ligera.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Botón para descargar -->
+    <div class="text-center mt-12">
+      <a
+        href="/assets/files/EntrenamientoCruzado.odt"
+        class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700"
+        target="_blank"
+      >
+        Descarga el Plan de Entrenamiento
+      </a>
+    </div>
+
+    <!-- Testimonios -->
+    <section class="mt-16">
+      <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Testimonios</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+          <p class="text-gray-600 italic">
+            "Comencé con este enfoque y ahora me siento más fuerte y equilibrado que nunca. ¡Muy recomendado!"
+          </p>
+          <h4 class="font-semibold text-gray-900 mt-4">- Laura, 34 años</h4>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+          <p class="text-gray-600 italic">
+            "El ciclismo complementó mis días de running y ahora rindo más en ambas disciplinas."
+          </p>
+          <h4 class="font-semibold text-gray-900 mt-4">- Marcos, 42 años</h4>
+        </div>
+        <div class="bg-gray-100 rounded-lg p-6 shadow-md">
+          <p class="text-gray-600 italic">
+            "Gracias al entrenamiento cruzado pude prevenir lesiones mientras seguía activo. ¡Un cambio de vida!"
+          </p>
+          <h4 class="font-semibold text-gray-900 mt-4">- Ana, 29 años</h4>
+        </div>
+      </div>
+    </section>
   </div>
 </Layout>
